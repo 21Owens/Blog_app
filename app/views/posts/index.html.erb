@@ -1,3 +1,12 @@
-<h2>
-    Hey
-</h2>
+<% @posts.each do |post| %>
+    <h2> 
+        <%= post.author %> 
+    </h2>
+    <p>
+        <%= post.description %>
+    </p>
+    <h3>
+        Created <%= time_ago_in_words(post.created_at) %> ago
+    </h3>
+<% end %>
+
