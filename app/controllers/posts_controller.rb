@@ -1,12 +1,16 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    @post = Post.all
   end
 
   def show
+    @post = Post.find(params[:id])
   end
 
+  def new
+    render "shared/_form"
+  end
 
 
 

@@ -1,9 +1,9 @@
-<% @posts.each do |post| %>
+<% @post.each do |post| %>
     <h2> 
         <%= post.author %> 
     </h2>
     <p>
-        <%= post.description %>
+        <%= link_to(post.description, post_url(post)) %>
     </p>
     <h3>
         Created <%= time_ago_in_words(post.created_at) %> ago
