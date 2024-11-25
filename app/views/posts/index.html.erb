@@ -1,12 +1,14 @@
 <% @post.each do |post| %>
-    <h2> 
-        <%= post.author %> 
+    <h2>
+        <%= post.author %>
     </h2>
     <p>
         <%= link_to(post.description, post_url(post)) %>
     </p>
     <h3>
-        Created <%= time_ago_in_words(post.created_at) %> ago
+        Created <%= time_ago_in_words(post.created_at) %> ago.
     </h3>
 <% end %>
+
+<%= button_to "Create new post!", new_post_path, :method => "get" %>
 

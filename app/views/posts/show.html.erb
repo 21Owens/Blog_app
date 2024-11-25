@@ -1,1 +1,12 @@
-<%= @post.author %>
+<%= link_to "Go Back", posts_path %>
+<div>
+    <h2>
+        <%= @post.author %>
+    </h2>
+    <h3>
+        <%= @post.description %>
+    <h3>
+
+</div>
+
+<%= button_to "Delete", @post, method: :delete %>
