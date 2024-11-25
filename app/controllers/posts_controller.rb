@@ -9,9 +9,21 @@ class PostsController < ApplicationController
   end
 
   def new
-    render "shared/_form"
+    @post = Post.new
   end
 
 
+  def create
+    @post = Post.create
+    @post.save
+    redirect_to post_path(@post)
+  end
+
+
+  private
+
+  def post_params
+    params.require(:post).permit!(:author, :description)
+  end
 
 end

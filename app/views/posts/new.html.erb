@@ -1,0 +1,10 @@
+<%= form_with(model: @post) do |form| %>
+
+<%= form.label :author %>
+<%= form.text_field :author %>
+
+<%= form.label :description %>
+<%= form.text_area :description %>
+
+<%= form.submit %>
+<% end %>
